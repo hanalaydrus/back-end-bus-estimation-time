@@ -20,6 +20,8 @@ class CreateBusTable extends Migration
             $table->string('driver_name')->nullable();
             $table->string('nopol')->nullable();
             $table->string('color')->nullable();
+            $table->string('lat')->nullable();
+            $table->string('long')->nullable();
             $table->timestamps();
         });
     }

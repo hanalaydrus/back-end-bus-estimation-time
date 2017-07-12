@@ -19,6 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::post('bus', 'BusController@store');
+Route::post('bus/position', 'BusController@update');
 
+Route::get('subject', 'TypeController@index');
 Route::get('track', 'TrackController@index');
 Route::get('track/{id}', 'TrackController@show');
