@@ -16,9 +16,10 @@ class CreateBusTable extends Migration
         Schema::create('bus', function (Blueprint $table) {
             $table->string('id');
             $table->integer('track_id')->unsigned();
-            $table->string('driver_name');
-            $table->string('nopol');
-            $table->string('color');
+            $table->integer('type_id')->unsigned();
+            $table->string('driver_name')->nullable();
+            $table->string('nopol')->nullable();
+            $table->string('color')->nullable();
             $table->timestamps();
         });
     }
